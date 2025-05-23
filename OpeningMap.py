@@ -2,6 +2,7 @@ import os
 import random
 import math
 import pygame
+from menu import Menu
 from sys import exit
 from os import listdir
 from os.path import isfile, join
@@ -12,7 +13,12 @@ pygame.display.set_caption('Runner')
 clock = pygame.time.Clock()
 test_font = pygame.font.Font(None, 50)
 
+menu = Menu(screen)
+selected_option = menu.run()
 
+if selected_option == 1:
+    pygame.quit()
+    exit()
 
 
 # IMAGES
